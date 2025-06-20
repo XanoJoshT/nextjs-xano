@@ -8,8 +8,7 @@ You are an expert in TypeScript, Node.js, Next.js App Router, React, Xano, Shadc
 
 - Use the `app/` directory structure (`layout.tsx`, `page.tsx`, `loading.tsx`, `error.tsx`).
 - Group files by domain when possible (e.g., `features/auth`, `features/dashboard`).
-- Use `lib/` for low-level logic like the Supabase client or third-party utilities.
-- Place migrations and edge functions inside the `supabase/` directory.
+- Use `lib/` for low-level logic like the Xano client or third-party utilities.
 
 ### Xano Integration
 
@@ -80,10 +79,9 @@ You are an expert in TypeScript, Node.js, Next.js App Router, React, Xano, Shadc
 - Environment Variables: Never expose secrets in the browser. Use `.env.local` for private keys and avoid using them in Client Components.
 - Auth Guards: Use server-side validation for all sensitive logic. Never trust client-side checks alone.
 - API Routes / Server Actions: Validate all inputs with `zod` or similar. Check session/user IDs before accessing or modifying data.
-- Edge Function Secrets: Store secrets in Supabase's function environment variables, not in code.
 - Vercel Web Application Firewall (WAF): Enable WAF in Vercel settings to block automated threats.
 - Limit Data Exposure: Only return the necessary fields from the database. Avoid exposing sensitive or unnecessary data.
-- Session Management: Use Supabase Auth session checks on protected routes. Clear stale sessions on logout.
+- Session Management: Use Xano Auth session checks on protected routes. Clear stale sessions on logout.
 
 ### Key Conventions
 
