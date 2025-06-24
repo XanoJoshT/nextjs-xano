@@ -21,14 +21,25 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-8">
       <main className="flex w-full max-w-3xl flex-col items-center space-y-8 text-center">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <Image
+            className="dark:invert"
+            src="/next.svg"
+            alt="Next.js logo"
+            width={180}
+            height={38}
+            priority
+          />
+          <Image
+            className="dark:drop-shadow-sm"
+            src="/xano.svg"
+            alt="Xano logo"
+            width={170}
+            height={38}
+            style={{ height: '38px', width: 'auto' }}
+            priority
+          />
+        </div>
         
         <h1 className="text-4xl font-bold tracking-tight">Next.js + Xano Boilerplate</h1>
         
